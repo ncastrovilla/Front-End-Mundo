@@ -9,7 +9,7 @@ export const Combobox = ({ titulo, url, setVariable, variable = '' }) => {
     setVariable('');
     axios({
       method: 'get',
-      url: URL + url,
+      url: URL + url + 'api_key=' + API_KEY,
       responseType: 'stream'
     })
       .then(function (response) {
